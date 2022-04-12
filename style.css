@@ -1,0 +1,555 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.textRegular {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.textBold {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.textSmall {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.textMiddle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.textBase {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.textBig {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.textLarge {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.textLargeRegular {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.textLargeBold {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.grid-body {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[auto-fit];
+      grid-template-rows: repeat(auto-fit, auto);
+  -ms-grid-columns: 1fr minmax(auto, 1140px) 1fr;
+      grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
+      grid-template-areas: "header header header " "brend brend brend" "main-box main-box main-box" "footer footer footer";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background: #222222;
+  min-height: 75px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr minmax(auto, 1140px) 1fr;
+      grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
+  -ms-grid-rows: 1fr 38px 1fr;
+      grid-template-rows: 1fr 38px 1fr;
+}
+
+.header .nav {
+  background: #222222;
+  grid-area: nav-menu;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.header-menu {
+  grid-area: header-menu;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style: none;
+  padding-right: 9px;
+}
+
+.header-menu_logo {
+  padding-right: 41px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.header-menu_catalog {
+  margin-left: auto;
+  padding-right: 25px;
+}
+
+.header-menu_reg {
+  padding-right: 42px;
+}
+
+.header-menu_cart {
+  position: relative;
+}
+
+.header-menu_cart .cart-count {
+  position: absolute;
+  right: -9px;
+  top: -8px;
+  background: #F16D7F;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  width: 19px;
+  height: 19px;
+  border: 0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-menu_link {
+  text-decoration: none;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: main-box;
+  -ms-grid-columns: 1fr minmax(auto, 1140px) 1fr;
+      grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
+  grid-auto-rows: auto;
+}
+
+.brend {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: brend;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: max-content;
+      grid-template-rows: -webkit-max-content;
+      grid-template-rows: max-content;
+  z-index: 2;
+}
+
+.brend-men {
+  width: 50vw;
+  background: rgba(113, 103, 105, 0.08);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center bottom;
+     object-position: center bottom;
+}
+
+.brend-logo {
+  background: #F1E4E6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.brend-logo .logo-rect {
+  width: 12px;
+  height: 92px;
+  background-color: #F16D7F;
+  margin-right: 16px;
+  margin-left: 64px;
+}
+
+.brend-logo .logo-text {
+  white-space: nowrap;
+}
+
+.brend-logo .logo-text-bolder {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 57.6px;
+  text-align: left;
+  color: #222222;
+}
+
+.brend-logo .logo-text-bold {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48.4px;
+  text-align: left;
+}
+
+.brend-logo .logo-text-red {
+  color: #F16D7F;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  max-height: 764px;
+  width: 100%;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.5);
+  -ms-grid-columns: 1fr 232px;
+      grid-template-columns: 1fr 232px;
+      grid-template-areas: ". menu";
+}
+
+.menu .close {
+  height: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+}
+
+.menu .menu-list {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: menu;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  padding-left: 34px;
+  padding-right: 16px;
+  padding-top: 16px;
+  padding-bottom: 157px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.menu .menu-list .menu-block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 9px;
+}
+
+.menu .menu-list .menu-head {
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+.menu .menu-list .menu-title {
+  color: #F16D7F;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.menu .menu-list .menu-text {
+  color: #6F6E6E;
+  list-style: none;
+}
+
+.menu .menu-list .menu_link {
+  text-decoration: none;
+  color: #6F6E6E;
+  display: inline;
+}
+
+.menu .menu-list .menu_link_padding {
+  margin-left: 21px;
+  margin-bottom: 11px;
+}
+
+.menu-active {
+  display: -ms-grid;
+  display: grid;
+}
+
+.offer {
+  grid-area: offer;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  margin-top: 65px;
+  margin-bottom: 96px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-auto-rows: minmax(-webkit-min-content, -webkit-max-content);
+  grid-auto-rows: minmax(min-content, max-content);
+}
+
+.offer_card {
+  position: relative;
+}
+
+.offer_card .card-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.offer_card .card-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(33, 22, 22, 0.7);
+}
+
+.offer_card:last-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.offer .offer-card_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.offer .offer-card_text-top {
+  color: #FFFFFF;
+}
+
+.offer .offer-card_text-bottom {
+  color: #F16D7F;
+}
+
+.footer-box {
+  background: #222224;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr minmax(auto, 1140px) 1fr;
+      grid-template-columns: 1fr minmax(auto, 1140px) 1fr;
+  -ms-grid-rows: 1fr auto 1fr;
+      grid-template-rows: 1fr auto 1fr;
+  min-height: 79px;
+}
+
+.footer-box .footer {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-box .footer_text {
+  color: #FBFBFB;
+}
+
+.footer-box .footer_link {
+  width: 148px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-box .footer_link .link-FIPTBox {
+  height: 32px;
+  width: 32px;
+  text-decoration: none;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-box .footer_link .link-FIPTBox:hover {
+  background: #F16D7F;
+}
+
+.footer-box .footer_link .link-FIPTBox:hover .FIPT-image path {
+  fill: white;
+}
+
+.footer-box .footer_link .link-FIPTBox:hover .FIPT-image {
+  display: inline-block;
+  height: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 1024px) {
+  .header,
+  .main,
+  .footer-box {
+    -ms-grid-columns: 32px minmax(auto, 1140px) 32px;
+        grid-template-columns: 32px minmax(auto, 1140px) 32px;
+  }
+  .brend-logo .logo-rect {
+    margin-left: 39px;
+  }
+  .brend-logo .logo-text-bolder {
+    font-size: 44px;
+    line-height: 53px;
+  }
+  .brend-logo .logo-text-bold {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .offer {
+    gap: 19px;
+  }
+}
+
+@media (max-width: 670px) {
+  .header,
+  .main,
+  .footer-box {
+    -ms-grid-columns: 16px minmax(auto, 1140px) 16px;
+        grid-template-columns: 16px minmax(auto, 1140px) 16px;
+  }
+  .header-menu_catalog {
+    padding-right: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .header-menu_reg, .header-menu_cart {
+    display: none;
+  }
+  .brend {
+    -ms-grid-rows: 363px;
+        grid-template-rows: 363px;
+  }
+  .brend-men {
+    display: none;
+  }
+  .brend-logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .brend-logo .logo-rect {
+    height: 61px;
+    margin-right: 15px;
+    margin-left: 0;
+  }
+  .brend-logo .logo-text-bolder {
+    font-size: 38px;
+    line-height: 46px;
+  }
+  .brend-logo .logo-text-bold {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .offer {
+    grid-auto-rows: minmax(111px, auto);
+    gap: 32px;
+  }
+  .offer_card {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+  .footer-box {
+    min-height: 143px;
+    -ms-grid-rows: 43px auto 9px;
+        grid-template-rows: 43px auto 9px;
+  }
+  .footer-box .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/*# sourceMappingURL=style.css.map */
