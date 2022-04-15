@@ -474,6 +474,140 @@ $height-footer-max: 143px;
         }
 }
 
+.customer-box {
+    background: $bgr-footer;
+    padding: 104px 0;
+    
+    .customer {
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(auto,360px));
+        grid-auto-rows: 134px;
+        gap: 30px;
+        justify-content: center;
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+
+            &_img {
+                height: 40px;
+                align-self: center;
+            }
+
+            &_title {
+                color: #FBFBFB;
+                text-align: center;
+                margin: 20px 0 16px;
+            }
+
+            &_text {
+                text-align: center;
+                color: #FBFBFB;
+            }
+        }
+    }
+}
+
+.subscribe-box {
+    position: relative;
+    background-image: url(image/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    
+    .shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(244, 244, 244, 0.7);
+        z-index: 2;
+    }   
+
+    .subscribe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 448px;
+    
+        &-speak {
+            display: flex;
+            flex-direction: column;
+            z-index: 3;
+            max-width: 360px;
+            flex-basis: 40%;
+
+            &_img {
+                height: 96px;  
+                padding-bottom: 30px; 
+                border-radius: 50%; 
+            }
+
+            &_info {
+                text-align: center;
+                color: #222224;
+            }
+        }
+
+        &-mail {
+            display: flex;
+            flex-direction: column;
+            z-index: 3;
+            max-width: 360px;
+            flex-basis: 40%;
+
+            &_title {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 40px;
+                text-align: center;
+                color: #222224;
+            }
+
+            &_text {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                text-align: center;
+                color: #222224;
+                padding-bottom: 32px;
+            }
+
+            .mail {
+                display: flex;
+                height: 49px;
+                align-self: center;
+                max-width: 356px;
+                min-width: 300px;
+
+                .field_mail {
+                    background: #E1E1E1;
+                    width: 70%;
+                    color: #222224;
+                    opacity: 0.67;
+                    box-sizing: border-box;
+                    padding: 6px 0 7px 22px;
+                    border: 0 solid #E1E1E1;
+                    border-top-left-radius: 24px ;
+                    border-bottom-left-radius: 24px;
+                }
+
+                .button_mail {
+                    width: 30%;
+                    background: #E05C6E;
+                    border: 0 solid #E05C6E ;
+                    border-top-right-radius: 24px;
+                    border-bottom-right-radius: 24px;
+                    justify-self: center;
+                    text-align: center;
+                    color: #FFFFFF;
+                }
+                
+            }
+        }
+    }
+}
+
 
 .footer-box {
     background: $bgr-footer;
@@ -519,6 +653,11 @@ $height-footer-max: 143px;
                     align-self: center;
                 }
             }  
+        }
+
+        @media (max-width: 1024px) {
+            padding-left: 16px;
+            padding-right: 9px;
         }
     }
 }
@@ -577,6 +716,32 @@ $height-footer-max: 143px;
             gap: 16px;
         }
     }
+
+
+
+    .customer-box {
+        padding: 48px 0 64px;
+
+        .customer {
+            grid-template-columns: minmax(auto,360px);
+            gap:48px;   
+        }
+    }
+
+    .subscribe-box {
+        background-position: 25%;
+
+        .subscribe {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 64px 0 120px;
+
+           
+        }
+    }
+
+
 }
 
 
@@ -647,10 +812,30 @@ $height-footer-max: 143px;
         }
     }
 
+
+    .customer-box {
+        padding-bottom: 81px;
+
+        .customer {
+            gap:47px;
+        }
+    }   
+
+    .subscribe-box {
+
+        .subscribe {
+            &-speak_info {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+
+
     .footer-box {
         .footer {
             min-height: $height-footer-max;
-            padding: 43px 0 9px;
+            padding: 43px 0 24px;
             flex-direction: column-reverse;
             justify-content: space-between;
         }
