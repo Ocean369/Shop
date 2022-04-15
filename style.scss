@@ -654,6 +654,11 @@ $height-footer-max: 143px;
                 }
             }  
         }
+
+        @media (max-width: 1024px) {
+            padding-left: 16px;
+            padding-right: 9px;
+        }
     }
 }
 
@@ -830,7 +835,7 @@ $height-footer-max: 143px;
     .footer-box {
         .footer {
             min-height: $height-footer-max;
-            padding: 43px 0 9px;
+            padding: 43px 0 24px;
             flex-direction: column-reverse;
             justify-content: space-between;
         }
