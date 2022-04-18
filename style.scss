@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
+@mixin itemBackground ($_urlImage) {
+    background-image: url(#{$_urlImage});
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 $bgr-header: #222222;
 $bgr-brend: #F1E4E6;
 $bgr-footer: #222224;
@@ -408,39 +415,27 @@ $height-footer-max: 143px;
                 position: relative;
 
                 .index-item1 {
-                    background-image: url(image/index-item1.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    @include itemBackground("image/index-item1.jpg");
                 }
                 
                 .index-item2 {
-                    background-image: url(image/index-item2.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    @include itemBackground(url(image/index-item2.jpg));
                 }
                 
                 .index-item3 {
-                    background-image: url(image/index-item3.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    @include itemBackground(url(image/index-item3.jpg));
                 }
                 
                 .index-item4 {
-                    background-image: url(image/index-item4.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    @include itemBackground(url(image/index-item4.jpg));
                 }
                 
                 .index-item5 {
-                    background-image: url(image/index-item5.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    @include itemBackground(url(image/index-item5.jpg));
                 }
                 
                 .index-item6 {
-                    background-image: url(image/index-item6.jpg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    @include itemBackground(url(image/index-item6.jpg));
                 }
 
                 &:hover .items-hover {
@@ -453,7 +448,6 @@ $height-footer-max: 143px;
                 padding-left: 17px;
                 padding-right: 29px;
                 padding-bottom: 20px;
-                // padding-top: 25px;
                 box-sizing: border-box;
             
 
