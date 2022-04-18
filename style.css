@@ -455,37 +455,37 @@
 }
 
 .items-infocards_image .index-item1 {
-  background-image: url(image/index-item1.jpg);
+  background-image: url("image/index-item1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .items-infocards_image .index-item2 {
-  background-image: url(image/index-item2.jpg);
+  background-image: url("image/index-item2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .items-infocards_image .index-item3 {
-  background-image: url(image/index-item3.jpg);
+  background-image: url("image/index-item3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .items-infocards_image .index-item4 {
-  background-image: url(image/index-item4.jpg);
+  background-image: url("image/index-item4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .items-infocards_image .index-item5 {
-  background-image: url(image/index-item5.jpg);
+  background-image: url("image/index-item5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .items-infocards_image .index-item6 {
-  background-image: url(image/index-item6.jpg);
+  background-image: url("image/index-item6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -564,7 +564,7 @@
 
 .subscribe-box {
   position: relative;
-  background-image: url(image/footer.jpg);
+  background-image: url("image/footer.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;

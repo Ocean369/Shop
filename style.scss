@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-@mixin itemBackground ($_urlImage) {
-    background-image: url(#{$_urlImage});
+@mixin backgroundImage ($_url) {
+    background-image: url($_url);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -414,28 +414,13 @@ $height-footer-max: 143px;
             &_image {
                 position: relative;
 
-                .index-item1 {
-                    @include itemBackground("image/index-item1.jpg");
-                }
-                
-                .index-item2 {
-                    @include itemBackground(url(image/index-item2.jpg));
-                }
-                
-                .index-item3 {
-                    @include itemBackground(url(image/index-item3.jpg));
-                }
-                
-                .index-item4 {
-                    @include itemBackground(url(image/index-item4.jpg));
-                }
-                
-                .index-item5 {
-                    @include itemBackground(url(image/index-item5.jpg));
-                }
-                
-                .index-item6 {
-                    @include itemBackground(url(image/index-item6.jpg));
+                @for $i from 1 through 6 {
+                    
+                    $_urlImage: "image/index-item#{$i}.jpg";
+
+                    .index-item#{$i} {
+                        @include backgroundImage($_urlImage);
+                    }
                 }
 
                 &:hover .items-hover {
@@ -504,9 +489,10 @@ $height-footer-max: 143px;
 
 .subscribe-box {
     position: relative;
-    background-image: url(image/footer.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    @include backgroundImage ("image/footer.jpg");
+    // background-image: url(image/footer.jpg);
+    // background-size: cover;
+    // background-repeat: no-repeat;
     z-index: 1;
     
     .shadow {
