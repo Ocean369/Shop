@@ -85,32 +85,80 @@
 
     <main class="catalog container">
         <nav class="catalog-menu">
-            <div class="left">
-                <a href="#">
-                    <span>FILTER</span>
-                    <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z"
-                            fill="black" />
-                    </svg>
-                </a>
+            <div class="filter">
+                <div class="basic">
+                    <a href="#">
+                        <span>FILTER</span>
+                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z"
+                                fill="black" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="filter-menu">
+                    <div class="categoryMenu">
+                        <a href="#" class="title textRegular">CATEGORY</a>
+                        <div class="menuItems">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Denim</a>
+                            <a href="#">Hoodies & Sweatshirts</a>
+                            <a href="#">Jackets & Coats</a>
+                            <a href="#">Polos</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Shoes</a>
+                            <a href="#">Sweaters & Knits</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Tanks</a>
+                        </div>
+                    </div>
+                    <!-- <hr> -->
+                    <div class="brandMenu">
+                        <a href="#" class="title textRegular">BRAND</a>
+                    </div>
+                    <!-- hr -->
+                    <div class="designerMenu">
+                        <a href="#" class="title textRegular">DESIGNER</a>
+                    </div>
+
+                </div>
             </div>
-            <div class="right">
+            <div class="sort">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a class="trending" href="#">
                             <span>TRENDING NOW</span>
                             <img src="image/down.png" alt="стрелка вниз">
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="size" href="#">
                             <span>SIZE </span>
                             <img src="image/down.png" alt="стрелка вниз">
                         </a>
+                        <form class="size-sort">
+                            <label class="container">XS
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">S
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">M
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">L
+                                <input type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </form>
                     </li>
                     <li>
-                        <a href="#">
+                        <a class="price" href="#">
                             <span>PRICE</span>
                             <img src="image/down.png" alt="стрелка вниз">
                         </a>
@@ -118,6 +166,7 @@
                 </ul>
             </div>
         </nav>
+
         <div class="catalog-card">
             <div class="items-infocards">
                 <div class=" items-infocards_image ">
@@ -127,7 +176,26 @@
                             <span class="items-hover_button-text textRegular">Add to Cart</span>
                         </button>
                     </div>
-                    <div class="items-index index-item4"></div>
+                    <div class="items-index index-item1"></div>
+                </div>
+                <div class="items-infocards_text">
+                    <h4 class="items-infocards_text-name textSmall">ELLERY X M'O CAPSULE</h4>
+                    <p class="items-infocards_text-info text">Known for her sculptural takes on traditional
+                        tailoring,
+                        Australian
+                        arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                    <p class="items-infocards_text-prise textMiddle">$52.00</p>
+                </div>
+            </div>
+            <div class="items-infocards">
+                <div class=" items-infocards_image ">
+                    <div class="items-hover">
+                        <button class="items-hover_button">
+                            <img class="items-hover_button-img" src="image/cart.svg" alt="cart">
+                            <span class="items-hover_button-text textRegular">Add to Cart</span>
+                        </button>
+                    </div>
+                    <div class="items-index index-item7"></div>
                 </div>
                 <div class="items-infocards_text">
                     <h4 class="items-infocards_text-name textSmall">ELLERY X M'O CAPSULE</h4>
@@ -165,25 +233,6 @@
                             <span class="items-hover_button-text textRegular">Add to Cart</span>
                         </button>
                     </div>
-                    <div class="items-index index-item6"></div>
-                </div>
-                <div class="items-infocards_text">
-                    <h4 class="items-infocards_text-name textSmall">ELLERY X M'O CAPSULE</h4>
-                    <p class="items-infocards_text-info text">Known for her sculptural takes on traditional
-                        tailoring,
-                        Australian
-                        arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                    <p class="items-infocards_text-prise textMiddle">$52.00</p>
-                </div>
-            </div>
-            <div class="items-infocards">
-                <div class=" items-infocards_image ">
-                    <div class="items-hover">
-                        <button class="items-hover_button">
-                            <img class="items-hover_button-img" src="image/cart.svg" alt="cart">
-                            <span class="items-hover_button-text textRegular">Add to Cart</span>
-                        </button>
-                    </div>
                     <div class="items-index index-item4"></div>
                 </div>
                 <div class="items-infocards_text">
@@ -203,7 +252,7 @@
                             <span class="items-hover_button-text textRegular">Add to Cart</span>
                         </button>
                     </div>
-                    <div class="items-index index-item3"></div>
+                    <div class="items-index index-item8"></div>
                 </div>
                 <div class="items-infocards_text">
                     <h4 class="items-infocards_text-name textSmall">ELLERY X M'O CAPSULE</h4>
@@ -222,7 +271,7 @@
                             <span class="items-hover_button-text textRegular">Add to Cart</span>
                         </button>
                     </div>
-                    <div class="items-index index-item6"></div>
+                    <div class="items-index index-item10"></div>
                 </div>
                 <div class="items-infocards_text">
                     <h4 class="items-infocards_text-name textSmall">ELLERY X M'O CAPSULE</h4>
@@ -241,7 +290,7 @@
                             <span class="items-hover_button-text textRegular">Add to Cart</span>
                         </button>
                     </div>
-                    <div class="items-index index-item4"></div>
+                    <div class="items-index index-item12"></div>
                 </div>
                 <div class="items-infocards_text">
                     <h4 class="items-infocards_text-name textSmall">ELLERY X M'O CAPSULE</h4>
@@ -260,7 +309,7 @@
                             <span class="items-hover_button-text textRegular">Add to Cart</span>
                         </button>
                     </div>
-                    <div class="items-index index-item3"></div>
+                    <div class="items-index index-item9"></div>
                 </div>
                 <div class="items-infocards_text">
                     <h4 class="items-infocards_text-name textSmall">ELLERY X M'O CAPSULE</h4>
@@ -279,7 +328,7 @@
                             <span class="items-hover_button-text textRegular">Add to Cart</span>
                         </button>
                     </div>
-                    <div class="items-index index-item6"></div>
+                    <div class="items-index index-item11"></div>
                 </div>
                 <div class="items-infocards_text">
                     <h4 class="items-infocards_text-name textSmall">ELLERY X M'O CAPSULE</h4>
@@ -291,6 +340,7 @@
                 </div>
             </div>
         </div>
+
         <div class="pagination textMiddle">
             <a href="#"><img src="image/product/left.svg" alt="left"></a>
             <div class="pages">
