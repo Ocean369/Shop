@@ -5,6 +5,21 @@
   font-family: 'Lato', sans-serif;
 }
 
+.show-grid {
+  display: -ms-grid !important;
+  display: grid !important;
+}
+
+.show-block {
+  display: block !important;
+}
+
+.show-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1140px;
@@ -433,11 +448,6 @@
 .menu .menu-list .menu_link_padding {
   margin-left: 21px;
   margin-bottom: 11px;
-}
-
-.menu-active {
-  display: -ms-grid;
-  display: grid;
 }
 
 .offer {
@@ -1230,12 +1240,6 @@
   padding-left: 18px;
 }
 
-.catalog-menu .filter-menu .show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .catalog-menu .filter-active {
   z-index: 2;
   background: #FFFFFF;
@@ -1283,18 +1287,20 @@
   left: 390px;
 }
 
-@media (max-width: 668px) {
+@media (max-width: 730px) {
   .catalog-menu .sort {
     font-size: 12px;
     line-height: 14px;
     left: auto;
     right: 0;
+    width: 260px;
   }
 }
 
 @media (max-width: 320px) {
   .catalog-menu .sort {
     font-size: 10px;
+    width: 220px;
   }
 }
 
@@ -1326,10 +1332,52 @@
   padding-right: 10px;
 }
 
+@media (max-width: 668px) {
+  .catalog-menu .sort span {
+    padding-right: 8px;
+  }
+}
+
 .catalog-menu .sort a {
   text-decoration: none;
   color: #6F6E6E;
   white-space: nowrap;
+}
+
+.catalog-menu .sort .size {
+  position: relative;
+}
+
+.catalog-menu .sort .size .size-sort {
+  display: none;
+  position: absolute;
+  top: 23px;
+  left: -10px;
+  z-index: 2;
+  width: 79px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  padding: 7px 9px 11px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 6px;
+  color: #6F6E6E;
+}
+
+.catalog-menu .sort .size .size-sort input {
+  margin-right: 9px;
+  border: 1px solid #EBEBEB;
+  border-radius: 0;
+}
+
+.catalog-menu .sort fa-angle-down:before {
+  color: #6F6E6E;
+  font-weight: lighter;
 }
 
 .catalog-card {

@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
+// @import "image/font-awesome/scss/font-awesome.scss";
+
+
 @mixin backgroundImage ($_url) {
     background-image: url($_url);
     background-size: cover;
@@ -24,6 +27,18 @@ $height-footer-max: 143px;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
+}
+
+.show-grid {
+    display: grid !important;
+}
+
+.show-block {
+    display: block !important;
+}
+
+.show-flex {
+    display: flex !important;
 }
 
 .container {
@@ -370,9 +385,6 @@ $height-footer-max: 143px;
     }
 }
 
-.menu-active {
-    display: grid;
-}
 
 .offer {
     margin-top: 65px;
@@ -889,6 +901,7 @@ $height-footer-max: 143px;
             box-sizing: border-box;
             grid-template-rows: repeat(autofit, auto);
             gap: 18px;
+            // position: absolute;
 
             .title{
                 text-decoration: none;
@@ -926,16 +939,14 @@ $height-footer-max: 143px;
                 }
             }
 
-            .show {
-                display: flex;
-            }
-
         }
 
         .filter-active {
+            
             z-index: 2;
             background: #FFFFFF;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            
 
             & svg path{
                 fill: #EF5B70;
@@ -956,9 +967,8 @@ $height-footer-max: 143px;
             .filter-menu {
                 display: grid;
                 width: 100%;
-                padding: 16px;
+                padding: 16px;      
             }
-
         }
 
         .sort {
@@ -973,15 +983,17 @@ $height-footer-max: 143px;
             top: 0;
             left: 390px;
 
-            @media (max-width: 668px) {
+            @media (max-width: 730px) {
                 font-size: 12px;
                 line-height: 14px;
                 left:auto;
                 right: 0;
+                width: 260px;
             }
 
             @media (max-width: 320px){
                 font-size: 10px;
+                width: 220px;
             }
             
             ul {
@@ -1005,6 +1017,9 @@ $height-footer-max: 143px;
 
             span {
                 padding-right: 10px;
+                @media (max-width: 668px){
+                    padding-right: 8px;
+                }
             }
 
             a {
@@ -1012,7 +1027,39 @@ $height-footer-max: 143px;
                 color: #6F6E6E;
                 white-space: nowrap;
             }
-            
+
+            .size {
+                position: relative;
+
+                .size-sort {
+                    display: none;
+                    position: absolute;
+                    top: 23px;
+                    left: -10px;
+                    z-index: 2;
+                    width:79px;
+                    background: #FFFFFF;
+                    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+                    padding: 7px 9px 11px;
+                    box-sizing: border-box;
+                    // display: flex;
+                    flex-direction: column;
+                    gap:6px;
+                    color: #6F6E6E;
+
+                    input {
+                        margin-right: 9px;
+                        border: 1px solid #EBEBEB;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            fa-angle-down:before {
+                color: #6F6E6E;
+                font-weight: lighter;
+            }
+
         }
     }
 

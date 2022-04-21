@@ -7,13 +7,16 @@ let categoryActive = document.querySelector('.categoryMenu');
 let brandActive = document.querySelector('.brandMenu');
 let designerActive = document.querySelector('.designerMenu');
 let menuItems = document.querySelector('.menuItems');
+let btnSize = document.querySelector('.size a');
+let formSize = document.querySelector('.size-sort');
+
 
 btn.onclick = function () {
-    menu.classList.toggle("menu-active");
+    menu.classList.toggle("show-grid");
 }
 
 btnClose.onclick = function () {
-    menu.classList.remove("menu-active");
+    menu.classList.remove("show-grid");
 }
 
 btnFilter.onclick = function () {
@@ -23,5 +26,9 @@ btnFilter.onclick = function () {
 categoryActive.onclick = function () {
     let title = categoryActive.querySelector(".title");
     title.classList.toggle("active");
-    menuItems.classList.toggle('show');
+    menuItems.classList.toggle('show-flex');
+}
+
+btnSize.onclick = function () {
+    formSize.classList.toggle('show-flex');
 }
