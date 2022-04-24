@@ -119,7 +119,7 @@ $height-footer-max: 143px;
     min-height: $height-header;
 
      .nav {
-        padding: 18px 0 19px;
+        padding: 17px 0;
 
         @media (max-width: 1024px) {
             padding-right: 16px;
@@ -324,15 +324,16 @@ $height-footer-max: 143px;
 
 .menu {
     display: none;
+    // display:flex;
+    justify-content: flex-end;
     position: absolute;
     top: $height-header;
     right: 0;
     max-height: 764px;
     width: 100%;
-    z-index: 3;
+    z-index: 2;
     background:rgba(0, 0, 0, 0.5);
-    grid-template-columns: 1fr 232px;
-    grid-template-areas: ". menu";
+    animation: 1.5s linear forwards menuShow;
 
     .close {
         height: 12px;
@@ -342,14 +343,17 @@ $height-footer-max: 143px;
     }
 
     .menu-list {
-            grid-area: menu;
             background-color: $bgr-white;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            width: 232px;
             padding-left: 34px;
             padding-right: 16px;
             padding-top: 16px;
             padding-bottom: 157px;
             box-sizing: border-box;
+            justify-self: flex-end;
+
+
         .menu-block {
             box-sizing: border-box;
             padding-top: 9px;
@@ -371,6 +375,11 @@ $height-footer-max: 143px;
             color:  $color-menu;
             list-style: none;
         }
+
+        li:hover .menu_link {
+            color: $color-pink;
+            font-size: 15px;
+        }
         
         .menu_link {
             text-decoration: none;
@@ -381,6 +390,20 @@ $height-footer-max: 143px;
                 margin-left: 21px;
                 margin-bottom: 11px;
             }
+        }
+
+        @keyframes menuShow {
+            from {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            to {
+                opacity: 1;
+            }    
         }
     }
 }
@@ -841,18 +864,19 @@ $height-footer-max: 143px;
         @media (max-width: 1024px) {
             justify-content: space-between;
         }
+
         @media (max-width: 360px) {
             gap:15px;
-
         }
 
         .filter {
-            // display: grid;
             position: absolute;
             left:0;
             top:0;
             width: 360px;
             box-sizing: border-box;
+            // height: auto;
+            transition: all 1s;
 
             .basic {
                 padding-left: 16px;
@@ -901,7 +925,6 @@ $height-footer-max: 143px;
             box-sizing: border-box;
             grid-template-rows: repeat(autofit, auto);
             gap: 18px;
-            // position: absolute;
 
             .title{
                 text-decoration: none;
@@ -914,13 +937,18 @@ $height-footer-max: 143px;
                 box-sizing: border-box;
                 padding-left: 11px;
                 border-bottom:  solid #EBEBEB;
+                transition: color 0.5s, transform 0.5s;
+
+                &:hover {
+                    color: #EF5B70;
+                    transform: perspective(300px) translateZ(20px); 
+                }
             }
 
             .active {
                  color: #EF5B70;
             }
 
-                 
             .menuItems {
                 display: none;
                 padding-top: 24px;
@@ -935,20 +963,24 @@ $height-footer-max: 143px;
                     font-size: 14px;
                     line-height: 17px;
                     color: #6F6E6E; 
-                    padding-left: 18px;    
+                    padding-left: 18px; 
+                    transition: font-size 0.2s;  
+                    
+                    &:hover {
+                        color: #EF5B70;
+                        font-size: 15px;
+                    }
                 }
             }
-
         }
+    
 
         .filter-active {
-            
             z-index: 2;
             background: #FFFFFF;
             box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-            
 
-            & svg path{
+            & svg path {
                 fill: #EF5B70;
             }
 
@@ -967,7 +999,33 @@ $height-footer-max: 143px;
             .filter-menu {
                 display: grid;
                 width: 100%;
-                padding: 16px;      
+                padding: 16px;  
+            }
+        }
+
+        // .filter-animation {
+        //    animation: 1.5s forwards filterShow ;
+        // }
+
+        @keyframes filterShow {
+            from {
+               height: 32px;
+               overflow: hidden; 
+            }
+           
+            33% {
+                height: 60px;
+                overflow: hidden; 
+            }
+
+            67% {
+                height: 150px;
+                overflow: hidden; 
+            }
+           
+            to {
+                height: 211px;
+                overflow: visible;
             }
         }
 

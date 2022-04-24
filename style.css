@@ -99,7 +99,7 @@
 }
 
 .header .nav {
-  padding: 18px 0 19px;
+  padding: 17px 0;
 }
 
 @media (max-width: 1024px) {
@@ -378,16 +378,18 @@
 
 .menu {
   display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   position: absolute;
   top: 75px;
   right: 0;
   max-height: 764px;
   width: 100%;
-  z-index: 3;
+  z-index: 2;
   background: rgba(0, 0, 0, 0.5);
-  -ms-grid-columns: 1fr 232px;
-      grid-template-columns: 1fr 232px;
-      grid-template-areas: ". menu";
+  -webkit-animation: 1.5s linear forwards menuShow;
+          animation: 1.5s linear forwards menuShow;
 }
 
 .menu .close {
@@ -402,18 +404,17 @@
 }
 
 .menu .menu-list {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: menu;
   background-color: #FFFFFF;
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  width: 232px;
   padding-left: 34px;
   padding-right: 16px;
   padding-top: 16px;
   padding-bottom: 157px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  justify-self: flex-end;
 }
 
 .menu .menu-list .menu-block {
@@ -439,6 +440,11 @@
   list-style: none;
 }
 
+.menu .menu-list li:hover .menu_link {
+  color: #F16D7F;
+  font-size: 15px;
+}
+
 .menu .menu-list .menu_link {
   text-decoration: none;
   color: #6F6E6E;
@@ -448,6 +454,30 @@
 .menu .menu-list .menu_link_padding {
   margin-left: 21px;
   margin-bottom: 11px;
+}
+
+@-webkit-keyframes menuShow {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes menuShow {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .offer {
@@ -1136,6 +1166,8 @@
   width: 360px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .catalog-menu .filter .basic {
@@ -1214,6 +1246,16 @@
           box-sizing: border-box;
   padding-left: 11px;
   border-bottom: solid #EBEBEB;
+  -webkit-transition: color 0.5s, -webkit-transform 0.5s;
+  transition: color 0.5s, -webkit-transform 0.5s;
+  transition: color 0.5s, transform 0.5s;
+  transition: color 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.catalog-menu .filter-menu .title:hover {
+  color: #EF5B70;
+  -webkit-transform: perspective(300px) translateZ(20px);
+          transform: perspective(300px) translateZ(20px);
 }
 
 .catalog-menu .filter-menu .active {
@@ -1238,6 +1280,13 @@
   line-height: 17px;
   color: #6F6E6E;
   padding-left: 18px;
+  -webkit-transition: font-size 0.2s;
+  transition: font-size 0.2s;
+}
+
+.catalog-menu .filter-menu .menuItems a:hover {
+  color: #EF5B70;
+  font-size: 15px;
 }
 
 .catalog-menu .filter-active {
@@ -1270,6 +1319,44 @@
   display: grid;
   width: 100%;
   padding: 16px;
+}
+
+@-webkit-keyframes filterShow {
+  from {
+    height: 32px;
+    overflow: hidden;
+  }
+  33% {
+    height: 60px;
+    overflow: hidden;
+  }
+  67% {
+    height: 150px;
+    overflow: hidden;
+  }
+  to {
+    height: 211px;
+    overflow: visible;
+  }
+}
+
+@keyframes filterShow {
+  from {
+    height: 32px;
+    overflow: hidden;
+  }
+  33% {
+    height: 60px;
+    overflow: hidden;
+  }
+  67% {
+    height: 150px;
+    overflow: hidden;
+  }
+  to {
+    height: 211px;
+    overflow: visible;
+  }
 }
 
 .catalog-menu .sort {

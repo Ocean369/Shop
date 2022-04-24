@@ -9,24 +9,34 @@ let designerActive = document.querySelector('.designerMenu');
 let menuItems = document.querySelector('.menuItems');
 let btnSize = document.querySelector('.size a');
 let formSize = document.querySelector('.size-sort');
+let title = categoryActive.querySelector(".title");
 
+function setHight() {
+    if (title.classList.contains('active')) {
+
+        filterActive.style.height = "531px";
+    } else {
+        filterActive.style.height = "211px";
+    }
+}
 
 btn.onclick = function () {
-    menu.classList.toggle("show-grid");
+    menu.classList.toggle("show-flex");
 }
 
 btnClose.onclick = function () {
-    menu.classList.remove("show-grid");
+    menu.classList.remove("show-flex");
 }
 
 btnFilter.onclick = function () {
     filterActive.classList.toggle("filter-active");
+    setHight();
 }
 
 categoryActive.onclick = function () {
-    let title = categoryActive.querySelector(".title");
     title.classList.toggle("active");
     menuItems.classList.toggle('show-flex');
+    window.setTimeout(setHight, 0);
 }
 
 btnSize.onclick = function () {
