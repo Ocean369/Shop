@@ -84,7 +84,7 @@
 
     <main class="product">
         <div class="product_images">
-            <a class="product_shift" href="#">
+            <a class="product_shift left" href="#">
                 <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M12.6998 3.7499L4.9498 11.4999L12.6998 19.2499L11.1498 22.3499L0.299805 11.4999L11.1498 0.649902L12.6998 3.7499Z"
@@ -92,7 +92,8 @@
                 </svg>
 
             </a>
-            <a class="product_shift" href="#">
+            <div class="image-slideshow slideshow-1 slideshow_active "></div>
+            <a class="product_shift right" href="#">
                 <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M0.299805 19.2499L8.0498 11.4999L0.299805 3.7499L1.8498 0.649902L12.6998 11.4999L1.8498 22.3499L0.299805 19.2499Z"
@@ -309,19 +310,9 @@
         </div>
 
     </footer>
-    <script>
-        var btn = document.querySelector('.header-menu_catalog');
-        var menu = document.querySelector('.menu');
-        var btnclose = document.querySelector('.close');
 
-        btn.onclick = function () {
-            menu.classList.toggle("menu-active");
-        }
-
-        btnclose.onclick = function () {
-            menu.classList.remove("menu-active");
-        }
-    </script>
+    <script src="scripts/index-script.js"></script>
+    <script src="scripts/product-script.js"></script>
 
 </body>
 

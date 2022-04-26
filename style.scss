@@ -629,23 +629,36 @@ $height-footer-max: 143px;
     &_images {
         background: #F7F7F7;
         height: 777px;
-        background-image: url(image/product/product-1.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: inherit;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         @media (max-width: 1024px) {
             height: 624px;
-            background-size: contain;
         }
 
-        @media (max-width: 668px) {
-            background-size: cover;
+        .image-slideshow {
+            width: 80%;
+            height: 100%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
         }
+
+        @for $i from 1 through 3 {
+            .slideshow-#{$i} {
+                background-image: url(image/product/product-#{$i}.png);
+                opacity: 0;
+                transform: scale(0);
+            }
+        }
+
+        .slideshow_active {
+            transform: scale(1);
+            opacity: 1;
+        }    
     }
+
 
     &_shift {
         width: 47px;
@@ -655,6 +668,7 @@ $height-footer-max: 143px;
         justify-content: center;
         align-items: center;  
         background: rgba(42, 42, 42, 0.15);
+        flex:none;
     }
 
     &_shift:hover path{
@@ -770,8 +784,13 @@ $height-footer-max: 143px;
                 border: 1px solid #FF6A6A;
                 background: #FFFFFF;
                 margin-top: 49px;
+                transition: transform 0.5s;
 
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
+
         }
 
         @media (max-width: 1024px) {

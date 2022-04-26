@@ -1,6 +1,4 @@
-let btn = document.querySelector('.header-menu_catalog');
-let menu = document.querySelector('.menu');
-let btnClose = document.querySelector('.close');
+
 let filterActive = document.querySelector('.filter');
 let btnFilter = document.querySelector('.basic');
 let categoryActive = document.querySelector('.categoryMenu');
@@ -9,9 +7,10 @@ let designerActive = document.querySelector('.designerMenu');
 let menuItems = document.querySelector('.menuItems');
 let btnSize = document.querySelector('.size a');
 let formSize = document.querySelector('.size-sort');
-let title = categoryActive.querySelector(".title");
+
 
 function setHight() {
+    let title = categoryActive.querySelector(".title");
     if (title.classList.contains('active')) {
 
         filterActive.style.height = "531px";
@@ -20,20 +19,13 @@ function setHight() {
     }
 }
 
-btn.onclick = function () {
-    menu.classList.toggle("show-flex");
-}
-
-btnClose.onclick = function () {
-    menu.classList.remove("show-flex");
-}
-
 btnFilter.onclick = function () {
     filterActive.classList.toggle("filter-active");
     setHight();
 }
 
 categoryActive.onclick = function () {
+    let title = categoryActive.querySelector(".title");
     title.classList.toggle("active");
     menuItems.classList.toggle('show-flex');
     window.setTimeout(setHight, 0);

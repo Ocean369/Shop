@@ -818,10 +818,6 @@
 .product_images {
   background: #F7F7F7;
   height: 777px;
-  background-image: url(image/product/product-1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -836,14 +832,42 @@
 @media (max-width: 1024px) {
   .product_images {
     height: 624px;
-    background-size: contain;
   }
 }
 
-@media (max-width: 668px) {
-  .product_images {
-    background-size: cover;
-  }
+.product_images .image-slideshow {
+  width: 80%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product_images .slideshow-1 {
+  background-image: url(image/product/product-1.png);
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.product_images .slideshow-2 {
+  background-image: url(image/product/product-2.png);
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.product_images .slideshow-3 {
+  background-image: url(image/product/product-3.png);
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.product_images .slideshow_active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
 }
 
 .product_shift {
@@ -860,6 +884,9 @@
       -ms-flex-align: center;
           align-items: center;
   background: rgba(42, 42, 42, 0.15);
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
 .product_shift:hover path {
@@ -1031,6 +1058,15 @@
   border: 1px solid #FF6A6A;
   background: #FFFFFF;
   margin-top: 49px;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.product_info_choose .choose-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 1024px) {
