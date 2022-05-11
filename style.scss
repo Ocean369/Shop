@@ -1315,6 +1315,33 @@ $height-footer-max: 143px;
     }
 }
 
+.registration {
+    display: grid;
+    grid-template-columns: 360px (minmax(360px,auto));
+    column-gap: 128px;
+    row-gap: 40px;
+    margin-top: 64px;
+    margin-bottom: 96px;
+
+    @media (max-width: 1024px) and   (min-width: 800px) {
+        column-gap: 50px;
+    }
+
+    @media (max-width: 800px) {
+        column-gap: 25px;
+    }
+
+    @media (max-width: 760px) {
+        grid-template-columns: auto;
+    }
+
+    &__userDate {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
 
 
 .customer-box {
@@ -1548,3 +1575,9 @@ $height-footer-max: 143px;
 @import "blocks/btnShopCart";
 @import "blocks/shippingAddress";
 @import "blocks/_checkout";
+@import "blocks/registration";
+@import "blocks/regInformation";
+@import "blocks/userName";
+@import "blocks/userSex";
+@import "blocks/userLogin";
+@import "blocks/buttonRegistr";

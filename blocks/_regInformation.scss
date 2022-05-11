@@ -1,0 +1,50 @@
+.b-regInfo {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+
+    &__title {
+        font-weight: 300;
+        padding-bottom: 22px;
+
+        @media (max-width: 1024px) {
+            padding-bottom: 32px;
+        }
+
+        @media (max-width: 668px) {
+            
+        }
+    }
+
+    &__text {
+        padding-bottom: 22px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        list-style-type: none;
+        position: relative;
+
+        .b-regInfo__list_li {
+            padding-left: 42px;
+        }
+
+        .b-regInfo__list_li::before {
+            content: url('image/check.svg');
+            // padding-right: 22px;
+            width: 20px;
+            height: 16px;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+}
