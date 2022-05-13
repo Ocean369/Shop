@@ -200,6 +200,13 @@
   }
 }
 
+@media (max-width: 678px) {
+  .header .nav {
+    padding-right: 0px;
+    padding-left: 6px;
+  }
+}
+
 .header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1769,13 +1776,15 @@
   .registration {
     -webkit-column-gap: 50px;
             column-gap: 50px;
+    margin-top: 40px;
   }
 }
 
 @media (max-width: 800px) {
   .registration {
-    -webkit-column-gap: 25px;
-            column-gap: 25px;
+    -webkit-column-gap: 23px;
+            column-gap: 23px;
+    margin-top: 40px;
   }
 }
 
@@ -1783,6 +1792,7 @@
   .registration {
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+    margin-top: 40px;
   }
 }
 
@@ -1795,6 +1805,10 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
+}
+
+.registration__userDate ._btnMargin {
+  margin-top: 9px;
 }
 
 .customer-box {
@@ -2428,7 +2442,7 @@
 }
 
 .b-regInfo__text {
-  padding-bottom: 22px;
+  padding-bottom: 24px;
 }
 
 .b-regInfo__list {
@@ -2439,9 +2453,21 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   list-style-type: none;
   position: relative;
+}
+
+@media (max-width: 1024px) {
+  .b-regInfo__list {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 668px) {
+  .b-regInfo__list {
+    gap: 23px;
+  }
 }
 
 .b-regInfo__list .b-regInfo__list_li {
@@ -2454,6 +2480,12 @@
   height: 16px;
   position: absolute;
   left: 0;
+}
+
+@media (max-width: 1024px) {
+  .b-regInfo__list .b-regInfo__list_li::before {
+    padding-top: 5px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2479,8 +2511,10 @@
 }
 
 .b-userName__firstName, .b-userName__lastName {
-  padding: 13px 17px 16px;
+  padding: 8px 15px 13px;
   font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .b-userName__firstName::-webkit-input-placeholder, .b-userName__lastName::-webkit-input-placeholder {
@@ -2519,12 +2553,13 @@
 
 .b-userSex__btn {
   height: 17px;
+  width: 17px;
 }
 
 .b-userSex__value {
   font-weight: 300;
   font-size: 11px;
-  line-height: 17px;
+  line-height: 20px;
   color: #000000;
   padding-right: 20px;
   padding-left: 10px;
@@ -2541,12 +2576,12 @@
 .b-userLogin__title {
   font-weight: 300;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 22px;
   color: #222222;
 }
 
 .b-userLogin__loginPass {
-  padding: 13px 17px 16px;
+  padding: 8px 15px 13px;
   font-size: 16px;
 }
 
@@ -2583,6 +2618,7 @@
   font-size: 13px;
   line-height: 16px;
   color: #B1B1B1;
+  margin-top: -6px;
 }
 
 .b-btnRegistr {

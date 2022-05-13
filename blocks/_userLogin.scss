@@ -6,12 +6,13 @@
     &__title {
         font-weight: 300;
         font-size: 16px;
-        line-height: 19px;
+        line-height: 22px;
         color: #222222;
     }
 
     &__loginPass {
-        padding: 13px 17px 16px;
+        // padding: 13px 17px 16px;
+        padding: 8px 15px 13px;
         font-size: 16px;
 
         &::placeholder {
@@ -27,5 +28,6 @@
         font-size: 13px;
         line-height: 16px;
         color: #B1B1B1;
+        margin-top: -6px;
     }
 }

@@ -140,6 +140,11 @@ $height-footer-max: 143px;
             padding-right: 16px;
             padding-left: 16px;
         }
+
+        @media (max-width: 678px) {
+            padding-right: 0px;
+            padding-left: 6px;
+        }
     }
     
     &-menu {
@@ -1325,20 +1330,27 @@ $height-footer-max: 143px;
 
     @media (max-width: 1024px) and   (min-width: 800px) {
         column-gap: 50px;
+        margin-top: 40px;
     }
 
     @media (max-width: 800px) {
-        column-gap: 25px;
+        column-gap: 23px;
+        margin-top: 40px;
     }
 
     @media (max-width: 760px) {
         grid-template-columns: auto;
+        margin-top: 40px;
     }
 
     &__userDate {
         display: flex;
         flex-direction: column;
         gap: 30px;
+
+        ._btnMargin {
+            margin-top: 9px;
+        }
     }
 }
 
