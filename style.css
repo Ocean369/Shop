@@ -2511,8 +2511,7 @@
 }
 
 .b-userName__firstName, .b-userName__lastName {
-  padding: 8px 15px 13px;
-  font-size: 16px;
+  padding: 10px 15px 13px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -2520,28 +2519,24 @@
 .b-userName__firstName::-webkit-input-placeholder, .b-userName__lastName::-webkit-input-placeholder {
   font-weight: 300;
   font-size: 13px;
-  line-height: 16px;
   color: #B1B1B1;
 }
 
 .b-userName__firstName:-ms-input-placeholder, .b-userName__lastName:-ms-input-placeholder {
   font-weight: 300;
   font-size: 13px;
-  line-height: 16px;
   color: #B1B1B1;
 }
 
 .b-userName__firstName::-ms-input-placeholder, .b-userName__lastName::-ms-input-placeholder {
   font-weight: 300;
   font-size: 13px;
-  line-height: 16px;
   color: #B1B1B1;
 }
 
 .b-userName__firstName::placeholder, .b-userName__lastName::placeholder {
   font-weight: 300;
   font-size: 13px;
-  line-height: 16px;
   color: #B1B1B1;
 }
 
@@ -2581,35 +2576,30 @@
 }
 
 .b-userLogin__loginPass {
-  padding: 8px 15px 13px;
-  font-size: 16px;
+  padding: 10px 15px 13px;
 }
 
 .b-userLogin__loginPass::-webkit-input-placeholder {
   font-weight: 300;
   font-size: 13px;
-  line-height: 16px;
   color: #B1B1B1;
 }
 
 .b-userLogin__loginPass:-ms-input-placeholder {
   font-weight: 300;
   font-size: 13px;
-  line-height: 16px;
   color: #B1B1B1;
 }
 
 .b-userLogin__loginPass::-ms-input-placeholder {
   font-weight: 300;
   font-size: 13px;
-  line-height: 16px;
   color: #B1B1B1;
 }
 
 .b-userLogin__loginPass::placeholder {
   font-weight: 300;
   font-size: 13px;
-  line-height: 16px;
   color: #B1B1B1;
 }
 

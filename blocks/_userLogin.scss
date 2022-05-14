@@ -11,14 +11,11 @@
     }
 
     &__loginPass {
-        // padding: 13px 17px 16px;
-        padding: 8px 15px 13px;
-        font-size: 16px;
+        padding: 10px 15px 13px;
 
         &::placeholder {
             font-weight: 300;
             font-size: 13px;
-            line-height: 16px;
             color: #B1B1B1;
         }
     }
