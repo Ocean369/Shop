@@ -140,6 +140,11 @@ $height-footer-max: 143px;
             padding-right: 16px;
             padding-left: 16px;
         }
+
+        @media (max-width: 678px) {
+            padding-right: 0px;
+            padding-left: 6px;
+        }
     }
     
     &-menu {
@@ -1315,6 +1320,40 @@ $height-footer-max: 143px;
     }
 }
 
+.registration {
+    display: grid;
+    grid-template-columns: 360px (minmax(360px,auto));
+    column-gap: 128px;
+    row-gap: 40px;
+    margin-top: 64px;
+    margin-bottom: 96px;
+
+    @media (max-width: 1024px) and   (min-width: 800px) {
+        column-gap: 50px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 800px) {
+        column-gap: 23px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 760px) {
+        grid-template-columns: auto;
+        margin-top: 40px;
+    }
+
+    &__userDate {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        ._btnMargin {
+            margin-top: 9px;
+        }
+    }
+}
+
 
 
 .customer-box {
@@ -1548,3 +1587,9 @@ $height-footer-max: 143px;
 @import "blocks/btnShopCart";
 @import "blocks/shippingAddress";
 @import "blocks/_checkout";
+@import "blocks/registration";
+@import "blocks/regInformation";
+@import "blocks/userName";
+@import "blocks/userSex";
+@import "blocks/userLogin";
+@import "blocks/buttonRegistr";
